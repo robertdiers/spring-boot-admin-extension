@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            demo:
+              - uri: http://localhost:8080
+                metadata:
+                  management.context-path: /actuator
+
+boot:
+  admin:
+    client:
+      url: http://localhost:8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: auditevents, beans, caches, conditions, configprops, env, flyway, health, httptrace, info, integrationgraph, loggers, logfile, liquibase, metrics, prometheus, mappings, quartz, scheduledtasks, sessions, shutdown, startup, threaddump
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  file:
+    name: demo.log
