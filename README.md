@@ -23,7 +23,7 @@ easy steps to extend app with spring-boot-admin to monitor itself (local and dev
         <dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-starter-client</artifactId>
-			<version>2.4.1</version>
+			<version>${spring.boot.admin.version}</version>
 		</dependency>
 ```
 
